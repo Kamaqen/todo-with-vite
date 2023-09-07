@@ -9,6 +9,7 @@ const App = () => {
   }
   function handleSubmit(event) {
     event.preventDefault();
+    if (newItem === "") return;
     setTodos([
       ...todos,
       { id: crypto.randomUUID(), title: newItem, completed: false },
